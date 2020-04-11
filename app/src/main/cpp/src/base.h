@@ -46,7 +46,8 @@ http://m.blog.chinaunix.net/uid-261392-id-2138941.html
 //系统版本，由于软件的更新，可能会造成有些函数、宏、类型等不一致而导致运行出错
 //建议在源码中判断系统版本是否相同
 #define _VERSION 3100
-
+#define _PLATFORM "android"
+#define _RUN_MODE "gcc"
 
 typedef unsigned short uint16; //有符号16bit整型
 typedef unsigned long int uint32; //无符号32bit整型
@@ -363,6 +364,8 @@ extern SMS sms;
 extern LCD lcd;
 extern JNIEnv *env;
 extern BMPSHOWFLIP bmpshowflip;
+
+
 //宏定义替补原有函数
 #define exit app_exit
 #define sand app_sand

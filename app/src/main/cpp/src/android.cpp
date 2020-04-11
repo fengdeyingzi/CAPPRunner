@@ -7,6 +7,9 @@
 
 #ifdef __cplusplus
 #include <iostream>
+#include <cstdlib>
+#include <cstdio>
+#include <cstring>
 extern "C"{ //因为cpp文件默认定义了该宏),则采用C语言方式进行编译
 #else
 #include <stdio.h>
@@ -84,7 +87,7 @@ LIST_REMOVE list_remove;
 LIST_GETSIZE list_getSize;
 LIST_NOTIFYDATA list_notifyData;
 EX_CALL ex_call;
-
+LOG_PRINT log_print;
 
 int android_add(char* name, void* ptr)
 {
@@ -219,6 +222,11 @@ int android_add(char* name, void* ptr)
  else if(!strcmp(name,"ex_call"))
  {
   ex_call=(EX_CALL)ptr;
+ }
+ else if(!strcmp(name, "log_print")){
+//#ifdef LOG_PRINT
+  log_print = (LOG_PRINT)ptr;
+//#endif
  }
  else
  {

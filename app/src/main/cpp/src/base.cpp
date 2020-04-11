@@ -481,6 +481,7 @@ int base_add(char* name,void* ptr)
  {
   bmpshowflip = (BMPSHOWFLIP)ptr;
  }
+
  
 	return 1;
 }

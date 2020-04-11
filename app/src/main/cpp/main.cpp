@@ -11,6 +11,14 @@ extern "C"{ //因为cpp文件默认定义了该宏),则采用C语言方式进行
 #endif
 void helloworld()
 {
+    printf("手机CAPP启动");
+
+    LOGI("手机CAPP启动：%s","开始运行");
+    LOGI("这是一个log");
+    LOGE("这是一个错误日志");
+
+
+
     setscrsize(720, 720*SCRH/SCRW);
     //用指定颜色清除屏幕
     cls(0,0,0);

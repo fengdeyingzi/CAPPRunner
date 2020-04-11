@@ -11,6 +11,8 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.xl.runC.ofToApk1.runActivity;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -27,15 +29,7 @@ TextView tv;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tv = findViewById(R.id.text_info);
-
-    }
-
-
-    @Override
-    protected void onResume()
-    {
-        // TODO: Implement this method
-        super.onResume();
+/*
         String filename = "/mnt/sdcard/mythroad/libcapp.so";
         String sopath = "/data/data/"+getPackageName()+"/lib/libcapp.so";
         File file = new File(sopath);
@@ -54,6 +48,18 @@ TextView tv;
             e.printStackTrace();
         }
         runCapp(filename);
+        */
+        Intent intent = new Intent(this, runActivity.class);
+        startActivity(intent);
+    }
+
+
+    @Override
+    protected void onResume()
+    {
+        // TODO: Implement this method
+        super.onResume();
+
     }
 
 
