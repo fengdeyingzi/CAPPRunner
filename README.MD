@@ -17,7 +17,7 @@
 在项目中**#include "android.h"**，然后使用LOGI LOGE等方法进行打印，log信息将输入到Andoid Studio的Logcat面板，搜索“capplog”即可查看手机C的log输出。
 
 ```c
-	LOGI("手机CAPP启动：%s","开始运行");
+    LOGI("手机CAPP启动：%s","开始运行");
     LOGI("这是一个log");
     LOGE("这是一个错误日志");
 ```

@@ -5,3 +5,5 @@ SCREEN:=SCREEN_ORIENTATION_PORTRAIT
 versionName:=1.0
 versionCode:=1
 RUN_MODE:=so
+REQUEST_PERMISSION:=true
+
